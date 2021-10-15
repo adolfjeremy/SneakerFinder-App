@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+a {
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.slide-in {
+  animation: slideIn 250ms cubic-bezier(0, 0.61, 0.74, 0.98) forwards;
+}
+
+.slide-out {
+  animation: slideOut 500ms cubic-bezier(0, 0.61, 0.74, 0.98) forwards;
+}
+
+@keyframes slideIn {
+  from {
+    visibility: hidden;
+    left: -1000px;
+  }
+  1% {
+    visibility: visible;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    left: 0;
+  }
+  1% {
+    opacity: 0.9;
+  }
+  to {
+    left: -1000px;
+    visibility: hidden;
+  }
+}
+
+header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  color: #eeeeee;
+  padding: 0 50px;
+  background-color: #9147ff;
+}
+
+header-menu .app-name {
+  font-size: 2vmax;
+  font-weight: 500;
+}
+
+header-menu nav {
+  display: flex;
+}
+
+@media (max-width: 64.09em) {
+  header-menu nav {
+    display: none;
+  }
+}
+
+header-menu nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header-menu nav ul li {
+  margin: 0 10px;
+}
+
+header-menu nav ul li a {
+  font-size: 2.5vmin;
+  font-weight: 400;
+}
+
+header-menu nav ul li a:hover {
+  color: #dad6d6;
+}
+
+header-menu .dekstop-search {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 64.09em) {
+  header-menu .dekstop-search {
+    display: none;
+  }
+}
+
+header-menu .dekstop-search #userInput,
+header-menu .dekstop-search #submitButton {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+header-menu .dekstop-search #submitButton {
+  margin-left: 10px;
+  color: #9147ff;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+header-menu .hamburger {
+  background-color: transparent;
+  border: none;
+}
+
+header-menu .hamburger .inner-line,
+header-menu .hamburger .inner-line::before,
+header-menu .hamburger .inner-line::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #ffffff;
+  right: 0;
+  transform-origin: 3px 1px;
+  transition: 300ms ease-in-out;
+}
+
+header-menu .hamburger .inner-line {
+  position: relative;
+  width: 25px;
+}
+
+header-menu .hamburger .inner-line::before {
+  bottom: 10px;
+  position: absolute;
+  width: 35px;
+  opacity: 1;
+}
+
+header-menu .hamburger .inner-line::after {
+  top: 10px;
+  position: absolute;
+  width: 20px;
+  opacity: 1;
+}
+
+header-menu .hamburger .rotate {
+  width: 0;
+}
+
+header-menu .hamburger .rotate::before {
+  bottom: 10px;
+  position: absolute;
+  width: 35px;
+  transform: rotate(45deg);
+}
+
+header-menu .hamburger .rotate::after {
+  top: 10px;
+  position: absolute;
+  width: 35px;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 64.1em) {
+  header-menu .hamburger {
+    display: none;
+  }
+}
+
+header-menu mobile-menu {
+  position: absolute;
+  top: 8vh;
+  text-align: center;
+  padding: 0 20px;
+  width: 60vw;
+  height: calc(100vh - 8vh);
+  border-top: 1px solid #ffffff;
+  background-color: #9147ff;
+}
+
+@media (min-width: 64.1em) {
+  header-menu mobile-menu {
+    display: none;
+  }
+}
+
+header-menu mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+
+header-menu mobile-menu ul li {
+  margin: 8px 0;
+}
+
+header-menu mobile-menu ul li a {
+  font-size: 2.3 vmax;
+  font-weight: 400;
+}
+
+header-menu mobile-menu .mobile-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0 0 0;
+}
+
+@media (min-width: 64.1em) {
+  header-menu mobile-menu .mobile-search {
+    display: none;
+  }
+}
+
+header-menu mobile-menu .mobile-search form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+header-menu mobile-menu .mobile-search form input,
+header-menu mobile-menu .mobile-search form button {
+  padding: 5px 10px;
+  line-height: 2rem;
+  font-weight: 500;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+header-menu mobile-menu .mobile-search form button {
+  margin-top: 10px;
+  color: #9147ff;
+  font-size: 2vmax;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ebedee;
+}
+/*# sourceMappingURL=main.css.map */

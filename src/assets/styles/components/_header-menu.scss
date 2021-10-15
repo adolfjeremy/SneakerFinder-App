@@ -1,0 +1,164 @@
+header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    color: #eeeeee;
+    padding: 0 50px;
+    background-color: #9147ff;
+    .app-name {
+        font-size: 2vmax;
+        font-weight: 500;
+    }
+    nav {
+        display: flex;
+        @include breakpoint-down(large) {
+            display: none;
+        }
+        ul {
+            display: flex;
+            list-style-type: none;
+            li {
+                margin: 0 10px;
+                a {
+                    font-size: 2.5vmin;
+                    font-weight: 400;
+                    &:hover {
+                        color: #dad6d6;
+                    }
+                }
+            }
+        }
+    }
+    .dekstop-search {
+        display: flex;
+        align-items: center;
+        @include breakpoint-down(large) {
+            display: none;
+        }
+        #userInput,
+        #submitButton {
+            padding: 8px;
+            border-radius: 6px;
+            border: none;
+        }
+        #submitButton {
+            margin-left: 10px;
+            color: #9147ff;
+            font-weight: 700;
+            cursor: pointer;
+            background-color: #ffffff;
+        }
+    }
+    .hamburger {
+        background-color: transparent;
+        border: none;
+        .inner-line,
+        .inner-line::before,
+        .inner-line::after {
+            content: "";
+            display: block;
+            height: 3px;
+            background-color: #ffffff;
+            right: 0;
+            transform-origin: 3px 1px;
+            transition: 300ms ease-in-out;
+        }
+        .inner-line {
+            position: relative;
+            width: 25px;
+            &::before {
+                bottom: 10px;
+                position: absolute;
+                width: 35px;
+                opacity: 1;
+            }
+            &::after {
+                top: 10px;
+                position: absolute;
+                width: 20px;
+                opacity: 1;
+            }
+        }
+        .rotate {
+            width: 0;
+            &::before {
+                bottom: 10px;
+                position: absolute;
+                width: 35px;
+                transform: rotate(45deg);
+            }
+            &::after {
+                top: 10px;
+                position: absolute;
+                width: 35px;
+                transform: rotate(-45deg);
+            }
+        }
+        @include breakpoint-up(large) {
+            display: none;
+        }
+    }
+    mobile-menu {
+        position: absolute;
+        top: 8vh;
+        // left: 0;
+        text-align: center;
+        padding: 0 20px;
+        width: 60vw;
+        height: calc(100vh - 8vh);
+        border-top: 1px solid #ffffff;
+        background-color: #9147ff;
+        @include breakpoint-up(large) {
+            display: none;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            margin: 8px 0 0 0;
+            padding: 0;
+            li {
+                margin: 8px 0;
+                a {
+                    font-size: 2.3 vmax;
+                    font-weight: 400;
+                }
+            }
+        }
+        .mobile-search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 0 0 0;
+            @include breakpoint-up(large) {
+                display: none;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                input,
+                button {
+                    padding: 5px 10px;
+                    line-height: 2rem;
+                    font-weight: 500;
+                    width: 100%;
+                    border: none;
+                    border-radius: 15px;
+                    background-color: #ffffff;
+                }
+                button {
+                    margin-top: 10px;
+                    color: #9147ff;
+                    font-size: 2vmax;
+                    font-weight: 600;
+                    cursor: pointer;
+                    background-color: #ebedee;
+                }
+            }
+        }
+    }
+}
