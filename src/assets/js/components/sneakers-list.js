@@ -1,3 +1,4 @@
+import "./sneaker-item.js";
 class SneakerList extends HTMLElement {
     set sneakers(sneakers) {
         this._sneakers = sneakers;
@@ -12,3 +13,5 @@ class SneakerList extends HTMLElement {
         });
     }
 }
+
+customElements.define("sneaker-list", SneakerList);
